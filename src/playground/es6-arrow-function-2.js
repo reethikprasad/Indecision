@@ -19,11 +19,21 @@ console.log(user.printPlacesLived());
 
 // Challenge area
 
+// const multiplier = {
+//   number: [1, 2, 3],
+//   multiplyBy: 3,
+//   multiply() {
+//     return this.SVGAnimatedNumberList.map((number) => number * this.multiplBy);
+//   },
+// };
+
+// console.log(multiplier.multiply());
+
 const multiplier = {
-  number: [1, 2, 3],
-  multiplyBy: 3,
+  numbers: [10, 20, 30],
+  multiplyBy: 30,
   multiply() {
-    return this.SVGAnimatedNumberList.map((number) => number * this.multiplBy);
+    return this.numbers.map((number) => number * this.multiplyBy);
   },
 };
 
