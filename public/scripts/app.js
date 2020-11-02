@@ -20,6 +20,12 @@ var onFormSubmit = function onFormSubmit(e) {
   }
 };
 
+var onMakeDecision = function onMakeDecision() {
+  var randomNum = Math.floor(Math.random() * app.options.length);
+  var option = app.options[randomNum];
+  alert(option);
+};
+
 var onRemoveAll = function onRemoveAll() {
   app.options = [];
   render();
@@ -47,9 +53,9 @@ var render = function render() {
       app.options.length > 0 ? "Here are your options" : "No options"
     ),
     React.createElement(
-      "p",
-      null,
-      app.options.length
+      "button",
+      { onClick: onMakeDecision },
+      "What should I choose"
     ),
     React.createElement(
       "button",

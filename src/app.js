@@ -18,6 +18,12 @@ const onFormSubmit = (e) => {
   }
 };
 
+const onMakeDecision = () => {
+  const randomNum = Math.floor(Math.random() * app.options.length);
+  const option = app.options[randomNum];
+  alert(option);
+};
+
 const onRemoveAll = () => {
   app.options = [];
   render();
@@ -31,7 +37,8 @@ const render = () => {
       <h1>{app.title}</h1>
       {app.subtitle && <p>{app.subtitle}</p>}
       <p>{app.options.length > 0 ? "Here are your options" : "No options"}</p>
-      <p>{app.options.length}</p>
+
+      <button onClick={onMakeDecision}>What should I choose</button>
       <button onClick={onRemoveAll}>Remove All</button>
       <ol>
         {app.options.map((option) => {
