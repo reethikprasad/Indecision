@@ -18,12 +18,12 @@ var Person = function () {
   _createClass(Person, [{
     key: "getGreeting",
     value: function getGreeting() {
-      return "Hi i am {this.name}!!!!";
+      return "Hi i am " + this.name + "!!!!";
     }
   }, {
     key: "getDesc",
     value: function getDesc() {
-      return "{this.name} is {this.age} year old.";
+      return this.name + " is " + this.age + " year old.";
     }
   }]);
 
@@ -31,9 +31,9 @@ var Person = function () {
 }();
 
 var me = new Person("Reethik");
-console.log(me.getGreeting);
+
 console.log(me.getDesc);
 
 var age = new Person();
-console.log(age.getGreeting);
+
 console.log(age.getDesc);
