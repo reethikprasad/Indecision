@@ -1,4 +1,4 @@
-class IndecisonApp extends React.Component {
+class IndecisionApp extends React.Component {
   render() {
     return (
       <div>
@@ -10,6 +10,7 @@ class IndecisonApp extends React.Component {
     );
   }
 }
+
 class Header extends React.Component {
   render() {
     return (
@@ -31,7 +32,7 @@ class Action extends React.Component {
   }
 }
 
-class Option extends React.Component {
+class Options extends React.Component {
   render() {
     return <div>Option component here</div>;
   }
@@ -43,4 +44,4 @@ class AddOption extends React.Component {
   }
 }
 
-ReactDOM.render(<IndecisonApp />, document.getElementById("app"));
+ReactDOM.render(<IndecisionApp />, document.getElementById("app"));

@@ -8,16 +8,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var IndecisonApp = function (_React$Component) {
-  _inherits(IndecisonApp, _React$Component);
+var IndecisionApp = function (_React$Component) {
+  _inherits(IndecisionApp, _React$Component);
 
-  function IndecisonApp() {
-    _classCallCheck(this, IndecisonApp);
+  function IndecisionApp() {
+    _classCallCheck(this, IndecisionApp);
 
-    return _possibleConstructorReturn(this, (IndecisonApp.__proto__ || Object.getPrototypeOf(IndecisonApp)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (IndecisionApp.__proto__ || Object.getPrototypeOf(IndecisionApp)).apply(this, arguments));
   }
 
-  _createClass(IndecisonApp, [{
+  _createClass(IndecisionApp, [{
     key: "render",
     value: function render() {
       return React.createElement(
@@ -31,7 +31,7 @@ var IndecisonApp = function (_React$Component) {
     }
   }]);
 
-  return IndecisonApp;
+  return IndecisionApp;
 }(React.Component);
 
 var Header = function (_React$Component2) {
@@ -93,16 +93,16 @@ var Action = function (_React$Component3) {
   return Action;
 }(React.Component);
 
-var Option = function (_React$Component4) {
-  _inherits(Option, _React$Component4);
+var Options = function (_React$Component4) {
+  _inherits(Options, _React$Component4);
 
-  function Option() {
-    _classCallCheck(this, Option);
+  function Options() {
+    _classCallCheck(this, Options);
 
-    return _possibleConstructorReturn(this, (Option.__proto__ || Object.getPrototypeOf(Option)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Options.__proto__ || Object.getPrototypeOf(Options)).apply(this, arguments));
   }
 
-  _createClass(Option, [{
+  _createClass(Options, [{
     key: "render",
     value: function render() {
       return React.createElement(
@@ -113,7 +113,7 @@ var Option = function (_React$Component4) {
     }
   }]);
 
-  return Option;
+  return Options;
 }(React.Component);
 
 var AddOption = function (_React$Component5) {
@@ -139,4 +139,4 @@ var AddOption = function (_React$Component5) {
   return AddOption;
 }(React.Component);
 
-ReactDOM.render(React.createElement(IndecisonApp, null), document.getElementById("app"));
+ReactDOM.render(React.createElement(IndecisionApp, null), document.getElementById("app"));
