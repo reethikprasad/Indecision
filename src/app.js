@@ -1,4 +1,4 @@
-class IndecisonApp extends React.component {
+class IndecisonApp extends React.Component {
   render() {
     return (
       <div>

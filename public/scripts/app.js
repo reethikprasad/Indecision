@@ -8,8 +8,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var IndecisonApp = function (_React$component) {
-  _inherits(IndecisonApp, _React$component);
+var IndecisonApp = function (_React$Component) {
+  _inherits(IndecisonApp, _React$Component);
 
   function IndecisonApp() {
     _classCallCheck(this, IndecisonApp);
@@ -32,10 +32,10 @@ var IndecisonApp = function (_React$component) {
   }]);
 
   return IndecisonApp;
-}(React.component);
+}(React.Component);
 
-var Header = function (_React$Component) {
-  _inherits(Header, _React$Component);
+var Header = function (_React$Component2) {
+  _inherits(Header, _React$Component2);
 
   function Header() {
     _classCallCheck(this, Header);
@@ -66,8 +66,8 @@ var Header = function (_React$Component) {
   return Header;
 }(React.Component);
 
-var Action = function (_React$Component2) {
-  _inherits(Action, _React$Component2);
+var Action = function (_React$Component3) {
+  _inherits(Action, _React$Component3);
 
   function Action() {
     _classCallCheck(this, Action);
@@ -93,8 +93,8 @@ var Action = function (_React$Component2) {
   return Action;
 }(React.Component);
 
-var Options = function (_React$Component3) {
-  _inherits(Options, _React$Component3);
+var Options = function (_React$Component4) {
+  _inherits(Options, _React$Component4);
 
   function Options() {
     _classCallCheck(this, Options);
@@ -116,8 +116,8 @@ var Options = function (_React$Component3) {
   return Options;
 }(React.Component);
 
-var AddOptions = function (_React$Component4) {
-  _inherits(AddOptions, _React$Component4);
+var AddOptions = function (_React$Component5) {
+  _inherits(AddOptions, _React$Component5);
 
   function AddOptions() {
     _classCallCheck(this, AddOptions);
