@@ -22,17 +22,35 @@ class Student extends Person {
   getDesc() {
     let desc = super.getDesc();
 
-    if (this.HasMajor) {
+    if (this.HasMajor()) {
       desc += ` their major is ${this.major}`;
     }
     return desc;
   }
 }
 
-const me = new Student("Reethik", 20, "CSE");
+class Traveller extends Person {
+  constructor(name, age, major, location) {
+    super(name, age, major);
+    this.location = location;
+  }
+  HasLocation() {
+    return !!this.location;
+  }
+  getGreeting() {
+    let loc = super.getGreeting();
 
-console.log(me.getDesc());
+    if (this.HasLocation()) {
+      loc += `my location is ${this.location}`;
+    }
+    return loc;
+  }
+}
 
-const age = new Student();
+const me = new Traveller("Reethik", 20, "CSE", "India");
 
-console.log(age.getDesc());
+console.log(me.getGreeting());
+
+const age = new Traveller();
+
+console.log(age.getGreeting());
