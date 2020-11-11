@@ -30,10 +30,10 @@ var Person = function () {
   return Person;
 }();
 
-var me = new Person("Reethik");
+var me = new Person("Reethik", 20);
 
-console.log(me.getDesc);
+console.log(me.getDesc());
 
 var age = new Person();
 
-console.log(age.getDesc);
+console.log(age.getDesc());

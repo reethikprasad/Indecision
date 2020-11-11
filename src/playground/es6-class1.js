@@ -11,10 +11,10 @@ class Person {
   }
 }
 
-const me = new Person("Reethik");
+const me = new Person("Reethik", 20);
 
-console.log(me.getDesc);
+console.log(me.getDesc());
 
 const age = new Person();
 
-console.log(age.getDesc);
+console.log(age.getDesc());
