@@ -93,50 +93,50 @@ var Action = function (_React$Component3) {
   return Action;
 }(React.Component);
 
-var Options = function (_React$Component4) {
-  _inherits(Options, _React$Component4);
+var Option = function (_React$Component4) {
+  _inherits(Option, _React$Component4);
 
-  function Options() {
-    _classCallCheck(this, Options);
+  function Option() {
+    _classCallCheck(this, Option);
 
-    return _possibleConstructorReturn(this, (Options.__proto__ || Object.getPrototypeOf(Options)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Option.__proto__ || Object.getPrototypeOf(Option)).apply(this, arguments));
   }
 
-  _createClass(Options, [{
+  _createClass(Option, [{
     key: "render",
     value: function render() {
       return React.createElement(
         "div",
         null,
-        "Select Options"
+        "Option component here"
       );
     }
   }]);
 
-  return Options;
+  return Option;
 }(React.Component);
 
-var AddOptions = function (_React$Component5) {
-  _inherits(AddOptions, _React$Component5);
+var AddOption = function (_React$Component5) {
+  _inherits(AddOption, _React$Component5);
 
-  function AddOptions() {
-    _classCallCheck(this, AddOptions);
+  function AddOption() {
+    _classCallCheck(this, AddOption);
 
-    return _possibleConstructorReturn(this, (AddOptions.__proto__ || Object.getPrototypeOf(AddOptions)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (AddOption.__proto__ || Object.getPrototypeOf(AddOption)).apply(this, arguments));
   }
 
-  _createClass(AddOptions, [{
+  _createClass(AddOption, [{
     key: "render",
     value: function render() {
       return React.createElement(
         "div",
         null,
-        "Add options"
+        "AddOption component here"
       );
     }
   }]);
 
-  return AddOptions;
+  return AddOption;
 }(React.Component);
 
 ReactDOM.render(React.createElement(IndecisonApp, null), document.getElementById("app"));
