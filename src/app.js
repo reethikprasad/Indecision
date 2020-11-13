@@ -3,6 +3,7 @@ class IndecisionApp extends React.Component {
     const title = "Indecision";
     const subtitle = "Put your life in the hands of a computer";
     const options = ["Thing one", "Thing two", "Thing four"];
+
     return (
       <div>
         <Header title={title} subtitle={subtitle} />
@@ -26,10 +27,13 @@ class Header extends React.Component {
 }
 
 class Action extends React.Component {
+  handlepick() {
+    alert("HandlePick");
+  }
   render() {
     return (
       <div>
-        <button>What should I do?</button>
+        <button onClick={this.handlepick}>What should I do?</button>
       </div>
     );
   }
@@ -40,7 +44,7 @@ class Options extends React.Component {
     return (
       <div>
         {this.props.options.map((option) => (
-          <Option key={option} optiontext={option} />
+          <Option key={option} optionText={option} />
         ))}
       </div>
     );
@@ -54,8 +58,24 @@ class Option extends React.Component {
 }
 
 class AddOption extends React.Component {
+  handleAddOption(e) {
+    e.preventDefault();
+
+    const option = e.target.elements.option.value.trim();
+
+    if (option) {
+      alert(option);
+    }
+  }
   render() {
-    return <div>AddOption component here</div>;
+    return (
+      <div>
+        <form onSubmit={this.handleAddOption}>
+          <input type="text" name="option" />
+          <button>Add Option</button>
+        </form>
+      </div>
+    );
   }
 }
 
