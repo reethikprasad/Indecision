@@ -8,13 +8,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var VisibliityToggle = function (_React$Component) {
-  _inherits(VisibliityToggle, _React$Component);
+var VisibilityToggle = function (_React$Component) {
+  _inherits(VisibilityToggle, _React$Component);
 
-  function VisibliityToggle(props) {
-    _classCallCheck(this, VisibliityToggle);
+  function VisibilityToggle(props) {
+    _classCallCheck(this, VisibilityToggle);
 
-    var _this = _possibleConstructorReturn(this, (VisibliityToggle.__proto__ || Object.getPrototypeOf(VisibliityToggle)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (VisibilityToggle.__proto__ || Object.getPrototypeOf(VisibilityToggle)).call(this, props));
 
     _this.handleToggleVisibility = _this.handleToggleVisibility.bind(_this);
     _this.state = {
@@ -23,7 +23,7 @@ var VisibliityToggle = function (_React$Component) {
     return _this;
   }
 
-  _createClass(VisibliityToggle, [{
+  _createClass(VisibilityToggle, [{
     key: "handleToggleVisibility",
     value: function handleToggleVisibility() {
       this.setState(function (prevState) {
@@ -45,10 +45,10 @@ var VisibliityToggle = function (_React$Component) {
         ),
         React.createElement(
           "button",
-          { onClick: handleToggleVisibility },
-          visibility ? "Hide details" : "Show details"
+          { onClick: this.handleToggleVisibility },
+          this.state.visibility ? "Hide details" : "Show details"
         ),
-        visibility && React.createElement(
+        this.state.visibility && React.createElement(
           "div",
           null,
           React.createElement(
@@ -61,7 +61,7 @@ var VisibliityToggle = function (_React$Component) {
     }
   }]);
 
-  return VisibliityToggle;
+  return VisibilityToggle;
 }(React.Component);
 
-ReactDOM.render(React.createElement(VisibliityToggle, null), document.getElementById("app"));
+ReactDOM.render(React.createElement(VisibilityToggle, null), document.getElementById("app"));
