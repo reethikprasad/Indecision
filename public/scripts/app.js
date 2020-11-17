@@ -44,6 +44,11 @@ var IndecisionApp = function (_React$Component) {
   }, {
     key: "handleAddOption",
     value: function handleAddOption(option) {
+      if (!option) {
+        return "Enter valid value to add item";
+      } else if (this.state.options.indexOf(option) > -1) {
+        return "This option already exists";
+      }
       this.setState(function (prevState) {
         return {
           options: prevState.options.concat(option)
@@ -210,9 +215,13 @@ var AddOption = function (_React$Component6) {
 
       var option = e.target.elements.option.value.trim();
 
-      if (option) {
-        this.props.handleAddOption(option);
-      }
+      var error = this.props.handleAddOption(option);
+
+      this.setState(function () {
+        return {
+          error: error
+        };
+      });
     }
   }, {
     key: "render",
@@ -220,6 +229,11 @@ var AddOption = function (_React$Component6) {
       return React.createElement(
         "div",
         null,
+        this.state.error && React.createElement(
+          "p",
+          null,
+          this.state.error
+        ),
         React.createElement(
           "form",
           { onSubmit: this.handleAddOption },
