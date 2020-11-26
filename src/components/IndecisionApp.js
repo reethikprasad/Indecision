@@ -1,16 +1,20 @@
 import React from "react";
 import AddOption from "./AddOptions";
-import Header from "./Header";
 import Action from "./Action";
+import Header from "./Header";
 import Options from "./Options";
+import OptionModal from "./OptionModel";
 
 export default class IndecisionApp extends React.Component {
   state = {
     options: [],
+    selectedOption: undefined,
   };
-
   handleDeleteOptions = () => {
     this.setState(() => ({ options: [] }));
+  };
+  handleClearSelectedOption = () => {
+    this.setState(() => ({ selectedOption: undefined }));
   };
   handleDeleteOption = (optionToRemove) => {
     this.setState((prevState) => ({
@@ -20,7 +24,9 @@ export default class IndecisionApp extends React.Component {
   handlePick = () => {
     const randomNum = Math.floor(Math.random() * this.state.options.length);
     const option = this.state.options[randomNum];
-    alert(option);
+    this.setState(() => ({
+      selectedOption: option,
+    }));
   };
   handleAddOption = (option) => {
     if (!option) {
@@ -33,10 +39,9 @@ export default class IndecisionApp extends React.Component {
       options: prevState.options.concat(option),
     }));
   };
-
   componentDidMount() {
     try {
-      const json = localStorage.getItem("options"); //allows options to store in bro
+      const json = localStorage.getItem("options");
       const options = JSON.parse(json);
 
       if (options) {
@@ -55,7 +60,6 @@ export default class IndecisionApp extends React.Component {
   componentWillUnmount() {
     console.log("componentWillUnmount");
   }
-
   render() {
     const subtitle = "Put your life in the hands of a computer";
 
@@ -72,6 +76,10 @@ export default class IndecisionApp extends React.Component {
           handleDeleteOption={this.handleDeleteOption}
         />
         <AddOption handleAddOption={this.handleAddOption} />
+        <OptionModal
+          selectedOption={this.state.selectedOption}
+          handleClearSelectedOption={this.handleClearSelectedOption}
+        />
       </div>
     );
   }
