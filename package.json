@@ -2,7 +2,7 @@
   "name": "indecision-application",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Vishwajeet Raj",
+  "author": "Reethik Prasad",
   "license": "MIT",
   "scripts": {
     "liveserver": "live-server public/",
